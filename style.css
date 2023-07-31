@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #0ef;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    background: #1f242d;
+}
+
+section:nth-child(odd) {
+    background: #323946;
+}
+
+.home {
+    top: 200px;
+    left: 100px;
+    position: relative;
+    height: 400px;
+    width: 700px;
+    color: #0ef;
+}
+
+.home h3 {
+    color: rgba(0, 238, 255, 0.526);
+}
+
+.contato {
+    text-align: right;
+    top: 200px;
+    left: 1200px;
+    position: relative;
+    height: 400px;
+    width: 700px;
+    color: white;
+    justify-content: space-between;
+}
+
+.contato h3 {
+    color: rgba(0, 238, 255, 0.526);
+}
+
+.contato h1 {
+    color: #0ef;
+}
+
+.contato a {
+    text-decoration: none;
+    color: white;
+}
+
+.contato a:hover {
+    color: #0ef;
+}
+
+.img1{
+    left: 500px;
+    top: 1600px;
+    position: absolute;
+    float: left;
+    display: flex;
+    height: 400px;
+}
