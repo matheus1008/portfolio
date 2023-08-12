@@ -21,10 +21,9 @@ header {
 }
 
 .logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+    display: flex;
+    height: 50px;
+    font-size: 30px;
 }
 
 nav a {
@@ -38,7 +37,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #0ef;
+    color: #F28A3D;
 }
 
 section {
@@ -54,14 +53,18 @@ section:nth-child(odd) {
 .home {
     top: 200px;
     left: 100px;
-    position: relative;
+    position: absolute;
     height: 400px;
     width: 700px;
-    color: #0ef;
+    color: #F28A3D;
 }
 
 .home h3 {
-    color: rgba(0, 238, 255, 0.526);
+    color: #BF6E30;
+}
+
+.homeimg {
+    right: 300px;
 }
 
 .contato {
@@ -76,11 +79,11 @@ section:nth-child(odd) {
 }
 
 .contato h3 {
-    color: rgba(0, 238, 255, 0.526);
+    color: #BF6E30;
 }
 
 .contato h1 {
-    color: #0ef;
+    color: #F28A3D;
 }
 
 .contato a {
@@ -89,14 +92,45 @@ section:nth-child(odd) {
 }
 
 .contato a:hover {
-    color: #0ef;
+    color: #F28A3D;
 }
 
 .img1{
     left: 500px;
-    top: 1600px;
+    top: 1900px;
     position: absolute;
     float: left;
     display: flex;
     height: 400px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+
+.gallery-item {
+    flex-basis: 32.7%;
+    margin-bottom: 6px;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 70%;
+    height: 70%;
+    object-fit: scale-down;
+}
+
+.lightox {
+    
 }

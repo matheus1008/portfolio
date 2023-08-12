@@ -2,15 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Portfólio</title>
 </head>
 <body>
-
     <header>
-        <a href="#" class="logo">Matheus Reis</a>
-
+        <a href="#" class="logo"><img src="LOGO.png" alt="Matheus Camargos Design"></a>
         <nav>
             <a href="#Home" class="active">Início</a>
             <a href="#Projetos">Projetos</a>
@@ -25,9 +26,19 @@
             <br>
             <p><h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti placeat quaerat eaque aliquid quia harum repellat commodi velit provident quibusdam quidem modi quisquam culpa excepturi, fugiat inventore enim animi perspiciatis.</h3></p>
         </div>
+        <div class="homeimg">
+            <img src="home.jpg" alt="">
+        </div>
     </section>
     <section id="Projetos">
-        
+        <div class="galeria">
+            <div class="gallery-item" data-index="1"><img src="1.jpg" alt=""></div>
+            <div class="gallery-item" data-index="2"><img src="2.jpg" alt=""></div>
+            <div class="gallery-item" data-index="3"><img src="3.jpg" alt=""></div>
+            <div class="gallery-item" data-index="4"><img src="4.jpg" alt=""></div>
+            <div class="gallery-item" data-index="5"><img src="5.jpg" alt=""></div>
+            <div class="gallery-item" data-index="6"><img src="6.jpg" alt=""></div>
+        </div>
     </section>
     <section id="Contato">
         <div class="contato">
@@ -41,5 +52,40 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+        const galleryItem = document.getElementsByClassName("gallery-item");
+        const lightBoxContainer = document.createElement("div");
+        const lightBoxContent = document.createElement("div");
+        const lightBoxImg = document.createElement("div");
+        const lightBoxPrev = document.createElement("div");
+        const lightBoxNext = document.createElement("div");
+
+        lightBoxContainer.classList.add("lightbox");
+        lightBoxContent.classList.add("lightbox-content");
+        lightBoxPrev.classList.add("fa","fa-angle-left","lightbox-prev");
+        lightBoxNext.classList.add("fa","fa-angle-right","lightbox-next");
+
+        lightBoxContainer.appendChild(lightBoxContent);
+        lightBoxContent.appendChild(lightBoxImg);
+        lightBoxContent.appendChild(lightBoxPrev);
+        lightBoxContent.appendChild(lightBoxNext);
+        document.body.appendChild(lightBoxContainer);
+
+        let index = 1;
+
+        function showLightBox(n) {
+            if (n > galleryItem.length) {
+                index = 1;
+            } else if(n < 1){
+                index = galleryItem.length;
+            }
+
+            let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
+            lightBoxImg.setAttribute("src", imageLocation);
+        }
+
+        function
+
+    </script>
 </body>
 </html>
