@@ -49,6 +49,13 @@ nav a.active {
     color: #F28A3D;
 }
 
+/* Layout Responsivo do NAV */
+@media screen and (max-width: 768px) {
+    nav a {
+        font-size: 13px;
+    }
+}
+
 /* Estilo das seções */
 section {
     padding: 100px 15px; /* Adicione um espaçamento interno para as seções e ajuste para telas menores */
@@ -76,22 +83,22 @@ section h1, section h3 {
         padding: 50px 0;
     }
     section h1 {
-        font-size: 28px;
+        font-size: 15px;
     }
 }
 
 /* Estilo da galeria */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
-}
+@media screen and (max-width: 768px) {
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste o tamanho mínimo e máximo das colunas */
+        grid-gap: 10px; /* Reduza o espaçamento entre os itens */
+    }
 
-.gallery-item {
-    flex-basis: 32.7%;
-    margin-bottom: 6px;
-    opacity: 0.85;
-    cursor: pointer;
+    .gallery-item {
+        flex-basis: auto; /* Remova a definição de largura fixa */
+        margin-bottom: 10px; /* Reduza a margem inferior entre os itens */
+    }
 }
 
 .gallery-item:hover {
@@ -165,7 +172,7 @@ section h1, section h3 {
 .content {
     margin: 20px;
     max-width: 1500px; /* Defina um valor máximo para evitar que o conteúdo se espalhe demais */
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-align: left;
 }
