@@ -10,49 +10,55 @@
 
 /* Estilo do corpo */
 body {
-    background: #1f242d;
     font-family: 'Poppins', sans-serif;
+    color: #fff; /* Defina a cor do texto padrão para branco */
+    background: black;
 }
 
 /* Estilo do cabeçalho */
 header {
-    color: #BF6E30;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 30px; /* Ajuste o espaçamento para dispositivos menores */
+    padding: 20px 120px;
     background: #11141a;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.logo {
+    display: flex;
+    height: 50px;
+    font-size: 30px;
+}
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #F28A3D;
 }
 
 /* Estilo das seções */
 section {
     padding: 100px 15px; /* Adicione um espaçamento interno para as seções e ajuste para telas menores */
-    color: #fff; /* Defina a cor do texto padrão para branco */
     text-align: center; /* Centralize o conteúdo */
 }
 
-/* Estilo para os títulos das seções */
-section h1 {
+/* Estilo para os títulos e subtítulos das seções */
+section h1, section h3 {
     color: #BF6E30;
-    font-size: 32px;
     margin-bottom: 20px;
-}
-
-/* Estilo para os subtítulos das seções */
-section h3 {
-    color: #BF6E30;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-section p {
-    color: #BF6E30;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 /* Responsividade */
@@ -81,19 +87,6 @@ section p {
     grid-gap: 20px;
 }
 
-/* Estilo das imagens */
-.image {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
 .gallery-item {
     flex-basis: 32.7%;
     margin-bottom: 6px;
@@ -106,9 +99,9 @@ section p {
 }
 
 .gallery-item img {
-    width: 90%;
-    height: 90%;
-    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Estilos para a lightbox */
@@ -158,17 +151,78 @@ section p {
     right: 20px;
 }
 
-.zoom {
-    color: white;
-    text-align: center;
-}
-
 .cor {
     color: #BF6E30;
 }
 
-.present {
-    margin-top: 20px;
+/* Estilos para a seção Home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin: 20px;
+    max-width: 1500px; /* Defina um valor máximo para evitar que o conteúdo se espalhe demais */
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.text {
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+    max-width: 400px; /* Defina um tamanho máximo para a imagem */
+    margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+/* Estilo para a imagem */
+.images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column-reverse; /* Inverte a ordem dos elementos para que a imagem fique acima do texto */
+    }
+
+    .text,
+    .images {
+        width: 100%; /* Garante que os elementos ocupem toda a largura da tela */
+    }
+}
+
+.dp1 {
+    display: none;
+}
+
+.dp2 {
+    display: none;
+}
+
+/* Estilo para o botão */
+button {
+    border-radius: 25px;
+    background: #BF6E30;
+    padding: 25px;
+    margin-bottom: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-decoration: none;
     color: white;
-    text-align: center;
+    display: inline; /* Exiba o botão como um elemento de texto */
+}
+button:hover {
+    color: black;
+}
+
+.container {
+    background: #11141a;
 }
