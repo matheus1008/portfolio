@@ -1,179 +1,99 @@
+/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Reset de estilos e definição da fonte padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    background: #1f242d;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Estilo do cabeçalho */
 header {
+    color: #BF6E30;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 120px;
+    padding: 20px 30px; /* Ajuste o espaçamento para dispositivos menores */
     background: #11141a;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 100;
 }
 
-.logo {
-    display: flex;
-    height: 50px;
-    font-size: 30px;
-}
-
-nav a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-
-nav a:hover,
-nav a.active {
-    color: #F28A3D;
-}
-
+/* Estilo das seções */
 section {
-    min-height: 100vh;
-    display: flex;
-    background: #1f242d;
+    padding: 100px 15px; /* Adicione um espaçamento interno para as seções e ajuste para telas menores */
+    color: #fff; /* Defina a cor do texto padrão para branco */
+    text-align: center; /* Centralize o conteúdo */
 }
 
-section:nth-child(odd) {
-    background: #323946;
+/* Estilo para os títulos das seções */
+section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.home {
-    top: 200px;
-    left: 100px;
-    position: absolute;
-    height: 400px;
-    width: 700px;
-    color: #F28A3D;
-}
-
-.home h3 {
+/* Estilo para os subtítulos das seções */
+section h3 {
     color: #BF6E30;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.homeimg {
-    right: 300px;
-}
-
-.contato {
-    text-align: right;
-    top: 200px;
-    left: 1200px;
-    position: relative;
-    height: 400px;
-    width: 700px;
-    color: white;
-    justify-content: space-between;
-}
-
-.contato h3 {
+section p {
     color: #BF6E30;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
-.contato h1 {
-    color: #F28A3D;
+/* Responsividade */
+
+/* Cabeçalho Responsivo */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
 }
 
-.contato a {
-    text-decoration: none;
-    color: white;
+/* Layout Responsivo das Seções */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+    section h1 {
+        font-size: 28px;
+    }
 }
 
-.contato a:hover {
-    color: #F28A3D;
+/* Estilo da galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
 }
 
-.img1{
-    left: 500px;
-    top: 1900px;
-    position: absolute;
-    float: left;
-    display: flex;
-    height: 400px;
+/* Estilo das imagens */
+.image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-    height: 100%;
-    padding: 10px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-    margin: 100px auto;
-}
-
-.gallery-item {
-    flex-basis: 32.7%;
-    margin-bottom: 6px;
-    opacity: 0.85;
-    cursor: pointer;
-}
-
-.gallery-item:hover {
-    opacity: 1;
-}
-
-.gallery-item img {
-    width: 70%;
-    height: 70%;
-    object-fit: scale-down;
-}
-
-/* Estilos para a lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+.image img {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.lightbox-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    position: relative;
-    text-align: center;
-}
-
-.lightbox img {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-}
-
-.lightbox-prev,
-.lightbox-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: #333;
-    cursor: pointer;
-}
-
-.lightbox-prev {
-    left: 20px;
-}
-
-.lightbox-next {
-    right: 20px;
+.image img:hover {
+    transform: scale(1.05);
 }
