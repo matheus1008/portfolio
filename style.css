@@ -88,17 +88,17 @@ section h1, section h3 {
 }
 
 /* Estilo da galeria */
-@media screen and (max-width: 768px) {
-    .galeria {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste o tamanho mínimo e máximo das colunas */
-        grid-gap: 10px; /* Reduza o espaçamento entre os itens */
-    }
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
 
-    .gallery-item {
-        flex-basis: auto; /* Remova a definição de largura fixa */
-        margin-bottom: 10px; /* Reduza a margem inferior entre os itens */
-    }
+.gallery-item {
+    flex-basis: 32.7%;
+    margin-bottom: 6px;
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 .gallery-item:hover {
