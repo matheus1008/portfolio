@@ -1,300 +1,122 @@
-/* Importação da fonte */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-/* Reset de estilos e definição da fonte padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo do corpo */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #fff; /* Defina a cor do texto padrão para branco */
-    background: black;
+    background-color: black;
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-content: space-between;
+    
 }
 
-/* Estilo do cabeçalho */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 120px;
-    background: #11141a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+.textit {
+    font-size: x-large;
+    padding-left: 50px;
+    padding-top: 250px;
 }
 
-.logo {
-    font-family: 'Poppins', sans-serif;
-    color: #F28A3D;
-    text-decoration: none;
-    display: flex;
-    height: 50px;
-    font-size: 30px;
+
+.divbt{
+    padding-top: 50px
 }
 
-nav a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-
-nav a:hover,
-nav a.active {
-    color: #F28A3D;
-}
-
-/* Layout Responsivo do NAV */
-@media screen and (max-width: 768px) {
-    nav a {
-        font-size: 13px;
-    }
-}
-
-/* Estilo das seções */
-section {
-    padding: 100px 15px; /* Adicione um espaçamento interno para as seções e ajuste para telas menores */
-    text-align: center; /* Centralize o conteúdo */
-}
-
-/* Estilo para os títulos e subtítulos das seções */
-section h1, section h3 {
-    color: #BF6E30;
-    margin-bottom: 20px;
-}
-
-/* Responsividade */
-
-/* Cabeçalho Responsivo */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-}
-
-/* Layout Responsivo das Seções */
-@media screen and (max-width: 768px) {
-    section {
-        padding: 50px 0;
-    }
-    section h1 {
-        font-size: 15px;
-    }
-}
-
-/* Estilo da galeria */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
-}
-
-/* Layout Responsivo da galeria */
-@media screen and (max-width: 768px) {
-    .galeria {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    }
-}
-
-.gallery-item {
-    flex-basis: 32.7%;
-    margin-bottom: 6px;
-    opacity: 0.85;
-    cursor: pointer;
-}
-
-.gallery-item:hover {
-    opacity: 1;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Estilos para a lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    position: relative;
-    text-align: center;
-}
-
-.lightbox img {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-}
-
-.lightbox-prev,
-.lightbox-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: #333;
-    cursor: pointer;
-}
-
-.lightbox-prev {
-    left: 20px;
-}
-
-.lightbox-next {
-    right: 20px;
-}
-
-.cor {
-    color: #BF6E30;
-}
-
-/* Estilos para a seção Home */
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    margin: 20px;
-    max-width: 1500px; /* Defina um valor máximo para evitar que o conteúdo se espalhe demais */
-    display: inline-flex;
-    align-items: center;
-    text-align: left;
-}
-
-.text {
-    width: 100%;
-}
-
-.text h1 {
-    color: white;
-}
-
-.images {
-    width: 100%;
-    max-width: 400px; /* Defina um tamanho máximo para a imagem */
-    margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o texto */
-}
-
-/* Estilo para a imagem */
-.images img {
-    width: 100%;
-    height: auto;
-}
-
-/* Media query para telas menores */
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column-reverse; /* Inverte a ordem dos elementos para que a imagem fique acima do texto */
-    }
-
-    .text,
-    .images {
-        width: 100%; /* Garante que os elementos ocupem toda a largura da tela */
-    }
-}
-
-.dp1 {
-    display: none;
-}
-
-.dp2 {
-    display: none;
-}
-
-/* Estilo para o botão */
-button {
-    border-radius: 25px;
-    background: #BF6E30;
-    padding: 25px;
-    margin-bottom: 20px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    text-decoration: none;
-    color: white;
-    display: inline; /* Exiba o botão como um elemento de texto */
-}
-button:hover {
+.bttit {
     color: black;
-}
-
-/* Layout Responsivo dos botões */
-@media screen and (max-width: 850px) {
-    button {
-        padding: 20px;
-    }
-}
-
-.container {
-    margin-bottom: 300px;
-    background: #11141a;
-}
-
-.container h1 {
-    font-size: 50px;
-    margin-bottom: 100px;
-}
-
-.esp {
-    color: white;
-}
-
-.contato {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
-}
-
-.contato h3 {
-    margin: 0 10px;
-}
-
-.contato a {
+    padding: 20px;
+    background-color: beige;
+    border-color: black;
+    border-radius: 12px;
+    position: absolute;
     text-decoration: none;
+    font-size: x-large;
+}
+
+.bttit:hover {
+    background-color: azure;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    font-size: medium;
+    margin-left: 800px;
+    bottom: 200px;
+    position: relative;
+    width: 300px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    background-color: rgba(0, 0, 0, 0.636);
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
     color: white;
-    padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.contato a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Adiciona regras de mídia queries para telas pequenas */
-@media screen and (max-width: 600px) {
-    .contato {
-        flex-direction: column; /* Altera a direção para coluna em telas pequenas */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-}
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
