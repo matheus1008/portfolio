@@ -5,14 +5,12 @@ body {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
-    align-content: space-between;
-    
 }
 
-.textit {
+nav {
     font-size: x-large;
     padding-left: 50px;
-    padding-top: 250px;
+    padding-top: 400px;
 }
 
 
@@ -22,6 +20,7 @@ body {
 
 .bttit {
     color: black;
+    margin-left: 50px;
     padding: 20px;
     background-color: beige;
     border-color: black;
@@ -41,12 +40,13 @@ body {
   }
   
   /* Position the image container (needed to position the left and right arrows) */
-  .container {
+
+  aside {
     font-size: medium;
-    margin-left: 800px;
-    bottom: 200px;
-    position: relative;
-    width: 300px;
+    margin-left: 1500px;
+    bottom: 100px;
+    position: absolute;
+    width: 500px;
   }
   
   /* Hide the images by default */
